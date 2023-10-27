@@ -1,0 +1,830 @@
+/* BASE RULES */
+
+*,
+*::before,
+*::after {
+  box-sizing:border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font:inherit;
+}
+
+
+input[type=button] {
+  background-color: purple;
+  color:white;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  padding: 14px 16px;
+  margin-top: 10px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 2px 6px;
+}
+
+input[type=button]:hover {
+  background-color: rgb(103, 0, 103);
+  cursor: pointer;
+}
+
+
+input[type=submit] {
+  background-color: purple;
+  color:white;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  padding: 14px 16px;
+  margin-top: 10px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 2px 6px;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(103, 0, 103);
+  cursor: pointer;
+}
+
+body, html {
+  font-family: Inter, Roboto, Arial;
+  font-weight: 600;
+  color:#f2f2f2;
+  font-size: 1rem;
+background-color:rgb(43, 43, 43);
+text-rendering: optimizespeed;
+-webkit-font-smoothing: antialiased;
+user-select:none;
+}
+
+/* =========================== */
+
+
+
+.title-format {
+    background-color:#05004b;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position:fixed;
+    overflow:hidden;
+    display:block;
+    top:10px;
+    width:95%;
+    height:100px; 
+
+
+}
+
+
+
+.title {  
+  font-size: 26px;
+  text-align: center;
+  padding-top:30px;
+  display: block;
+}
+
+.fullwidth-center-content {  
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    vertical-align: middle;
+}
+
+/* Style the tab */
+.tab {
+    width:95%;
+    top:109px;
+    overflow: hidden; 
+    background-color: #202020;
+    position:fixed;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size:1.1rem;
+  }
+
+  .tab #myLinks{
+      display:none;
+   
+  }
+
+  /* Style the links inside the navigation bar */
+.tab a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+   
+  }
+ 
+  
+
+  .tab a.icon {
+    background: #202020;
+    display: block;
+    position:absolute;
+    right: 0;
+    top: 0;
+
+  }
+
+  /* Change background color of buttons on hover */
+  .tab a:hover  {
+    background-color: #ddd;
+    cursor:pointer;
+    color:black;
+  }
+
+  .tab #active:hover {
+    background-color: #202020;
+    color: white;
+    cursor:default;
+  }
+  
+
+  /* Style the active link (or home/logo) */
+.active {
+    background-color: #202020;
+    color: white;
+  }
+  
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    width:100%;
+    font-weight: normal;
+  }
+
+table {
+  margin-top:10px;
+  border-collapse: separate;
+  width:100%;
+  border-spacing:0px 10px;
+}
+
+thead {
+  font-size:2vw;
+}
+
+td {
+  
+  padding: 5px;
+  text-overflow: ellipsis;
+  max-width:1vw;
+  font-size:2vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align:center;
+ 
+}
+
+td:first-of-type {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+td:last-of-type {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+tr[id='Gold'] {
+background-color: gold;
+}
+
+tr[id='Silver'] {
+  background-color: silver;
+  }
+
+  tr[id='Bronze'] {
+    background-color: rgb(140, 120, 83)
+  }
+
+
+.tab-bottom {
+    width:100%;
+    overflow: hidden; 
+    background-color:#202020;
+    position: fixed;
+    height: 100px;
+    bottom:0;
+    vertical-align:middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+
+.tab-bottom a.wallet {
+    background-color: purple;
+    border-radius: 15px;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgb(0 0 0 / 16%) 0px 2px 6px;
+}
+
+.tab-bottom a.wallet:hover {
+    background-color: rgb(103, 0, 103);
+    cursor: pointer;
+}
+
+
+/* ACCOUNT */
+
+.tab-bottom .tokenName {
+position:absolute;
+top:17px;
+left:80px;
+}
+
+.tab-bottom .balance {
+color:dimgray;
+position:absolute;
+top:43px;
+font-weight: normal;
+font-size:1rem;
+left:80px;
+}
+
+
+
+
+div[id=balancedisplay] {
+ display:none;
+ position: relative;
+ width:240px;
+ height:100%;
+ padding-top:10px;
+ padding-bottom: 10px;
+}
+
+div[id=balancebox] {
+  font-size:1.2rem;
+  background-color: rgb(43, 43, 43);
+  border-radius: 15px;
+  position: absolute;
+  height:80px;
+  width:220px;
+  
+  vertical-align: middle;
+}
+
+img[id='coinbig'] {
+  left:10px;
+  width:60px;
+  height:60px;
+  position:relative;
+  display:block;
+  float:left;
+top:10px;
+}
+
+a[id='account'] {
+  position:relative;
+  float:right;
+  top:20px;
+  color:dimgray;
+}
+
+a[id='account']:hover {
+  color:white;
+}
+
+a[id='settings'] {
+  position:relative;
+  float:right;
+  top:20px;
+  color:dimgray;
+}
+
+a[id='settings']:hover {
+  color:white;
+}
+
+/* ======================= */
+
+
+
+
+div[id*=pricedisplay] {
+  width:100%;
+  vertical-align:middle;
+  display:grid;
+  grid-template-columns: 1fr;
+  text-align:center;
+  justify-items: center;
+  padding-bottom:20px;
+}
+
+
+div[id=clearleft] {
+  clear:left;
+}
+
+
+
+
+ .col img[id='rewardimage'] {
+   width:100%;
+   object-fit:cover;
+   height:300px;
+   overflow: hidden;
+   border-radius: 5px 5px 0 0;
+   padding-bottom:10px;
+
+ }
+
+ .col img[id='coinsmall'] { 
+   width:1vw;
+   height:1vw;
+   display:block;
+   float:none;
+   padding-right:2px;
+ }
+
+ #ShopGrid {
+  margin-top:10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display:grid;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+ 
+ .col {
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    border-radius: 5px;
+    background: #009578;
+    color: #ffffff;
+	transition: 0.3s;
+	font-size:1vw;  
+
+ }
+
+ 
+
+ .col[id='Gold'] {
+   background-color: gold;
+ }
+ .col[id='Silver'] {
+  background-color: silver;
+}
+.col[id='Bronze'] {
+  background-color: rgb(140, 120, 83);
+}
+
+ .col a {
+  float:none;
+  position:relative;
+  display:grid;
+  top:10px;
+  font-weight: 600;
+}
+
+
+
+/* .col a[id='rewardpriceData'] {
+  font-weight: normal;
+  padding:0;
+  display:inline-block;
+  vertical-align:middle;
+  float:none;
+  cursor:pointer;
+  padding-left:5px;
+  font-weight: normal;
+} */
+
+.centerflexbox {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:inherit;
+  
+}
+
+
+
+
+
+.col a[id*=buyReward] {
+  background-color: purple;
+  border:hidden;
+  border-radius: 15px;
+  color:white;
+  display:grid;
+  grid-template-columns: 1vw max-content;
+  cursor:pointer;
+  justify-items: stretch;
+  align-items: center;
+  padding-top:10px;
+  padding-bottom: 10px;
+  width:10vw;
+  float:none;
+  box-shadow: rgb(0 0 0 / 16%) 0px 2px 6px;
+  font-weight: normal;
+}
+
+.col a[id*=buyReward]:hover {
+
+  background-color: rgb(103, 0, 103);
+  cursor: pointer;
+}
+
+ .Shop:after {
+    content: "";
+    display: table;
+    clear: both;
+ }
+
+select {
+  margin: 5px;
+  border-radius: 15px;
+  outline:none;
+}
+
+ @media screen and (max-width: 1000px) {
+
+#ShopGrid {
+  grid-template-columns: 1fr 1fr;
+}
+
+    .col {
+       /* width: 45%; */   
+       font-size:2.3vw;
+    }
+
+
+    
+
+    .div[id=balancedisplay] {
+      font-size:2.4vw;
+      
+    }
+
+    .col img[id='coinsmall'] { 
+    width:2.4vw;
+    height:2.4vw;
+    }
+
+    
+
+      .col a[id*=buyReward] {
+        width:18vw;
+        grid-template-columns: 1.2vw max-content;
+        }
+ }
+ @media screen and (max-width: 700px) {
+  
+  #ShopGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  
+  .col {
+       /* width: 95%; */
+       
+       
+       font-size:4.8vw;
+    }
+    .div[id=balancedisplay] {
+      font-size:4.8vw;
+     
+    }
+
+    .col img[id='coinsmall'] { 
+      width:4.8vw;
+      height:4.8vw;
+  
+    }
+
+    .col a[id*=buyReward] {
+    width:36vw;
+    grid-template-columns: 4.8vw max-content;
+    align-items: center;
+    }
+
+
+
+
+
+    .tab a{
+        float:none;
+    }
+
+    .tab a.icon {
+    display: block;
+    }
+
+}
+
+
+ .container {
+    padding-top: 150px;
+    width:95%;
+    padding-bottom:110px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+.modalWallet {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  vertical-align: middle;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+}
+
+ .modalError {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  vertical-align: middle;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+}
+
+ .modalPurchase {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  vertical-align: middle;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+}
+
+ 
+ .modalTransactionConfirm {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  vertical-align: middle;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+}
+
+.modalSettings {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  vertical-align: middle;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+  position:relative;
+  margin: auto;
+  background-color: #05004b;
+  padding: 20px;
+  width: 75%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+
+/* The Close Button */
+.close {
+  
+  float: right;
+  font-size: 1.2rem;
+  top:0;
+
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.connectWallet input[type=password] {
+font-size:1.2rem;
+margin:10px;
+width:80%;
+border-radius: 15px;
+text-decoration: none;
+outline:none;
+}
+
+
+
+.connectWallet label {
+  font-size:1rem;
+ 
+  }
+  
+
+ 
+  
+.itemPurchase {
+  position:relative;
+  width: 200px;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight:normal;
+}
+  
+
+#purchasePriceMinus {
+  position:absolute;
+  left:22%;
+  margin-left:0;
+  margin-right:0;
+  
+}
+
+#yesBtn, #noBtn {
+  width:75px;
+  text-align:center;
+
+}
+
+/* LOADING ANIMATION */
+
+
+label[id='lblCheck'] {
+  position: relative;
+  height: 75px;
+  width: 75px;
+  display: inline-block;
+  border: 4px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  border-left-color: purple;
+  animation: rotate 1.2s linear infinite;
+}
+@keyframes rotate {
+  50%{
+    border-left-color: purple;
+  }
+  75%{
+    border-left-color: rgb(103, 0, 103);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+label .check-icon{
+  display: none;
+}
+label .check-icon:after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 20px;
+  transform: scaleX(-1) rotate(135deg);
+  height: 28px;
+  width: 16px;
+  border-top: 4px solid purple;
+  border-right: 4px solid purple;
+  transform-origin: left top;
+  animation: check-icon 0.8s ease;
+}
+@keyframes check-icon {
+  0%{
+    height: 0;
+    width: 0;
+    /* opacity: 1; */
+  }
+  20%{
+    height: 0;
+    width: 16px;
+    /* opacity: 1; */
+  }
+  40%{
+    height: 28px;
+    width: 16px;
+    /* opacity: 1; */
+  }
+  100%{
+    height: 28px;
+    width: 16px;
+    /* opacity: 1; */
+  }
+}
+#check {
+  display: none; 
+}
+input:checked ~ label .check-icon{
+  display: block;
+}
+input:checked ~ label{
+  animation: none;
+  border-color: purple;
+  transition: border 0.5s ease-out;
+}
+
+#underlinetitle {
+  text-decoration: underline;
+}
+
+.purchases {
+  width:100%;
+}
+
+.purchases .purchaserow {
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 5px;
+  row-gap: 20px;
+  border-radius:15px;
+  padding:20px;
+  margin-top: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+div[id='Gold'] {
+  background-color:gold;
+}
+
+div[id='Silver'] {
+  background-color:silver;
+}
+
+div[id='Bronze'] {
+  background-color:rgb(140, 120, 83);
+}
+
+
+.purchases .purchaserow .purchaserewardtier {
+  display:none;
+}
+
+.purchases .purchaserow .purchaseid {
+  display:none;
+}
+
+.purchases .purchaserow a:not([class='purchasetitle']):not([class='purchasedate']) {
+  justify-self: right;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+ width:80%;
+ text-align: right;
+}
+
+.purchases .purchaserow .purchasedate {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: center;
+}
+
+.publicKey {
+  display:none;
+}
+
+.latestTransaction {
+  display:none;
+}
+
+.transactionDetails {
+  display:none;
+}
+  

@@ -1,0 +1,18 @@
+Expected Goods In
+=====================
+
+Make use by compulsory
+Check on submit orders
+Increase Size on Goodsin Label
+
+
+
+Picking System
+===============
+
+Print box labels available on other screens (as print pallet labels) - Pick Bulks, Frozen, Prepared, Dry Goods, Dairy, JIT
+Add load all section to each section on grid for any screen that sorts products by default and count of boxes
+
+
+
+

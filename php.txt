@@ -1,0 +1,31 @@
+<?php
+
+echo 
+
+$servername = "sql109.byetcluster.com";
+$username = "epiz_30637749";
+$password = "zMvI1Yt4E0GA";
+$dbname = "epiz_30637749_therewardsstore";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, date, reward, rewardtier, price, redeemed, account, transaction FROM purchasehistory";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  echo "<div class='purchases'>"
+  while($row = $result->fetch_assoc()) {
+    echo "<div class='purchaserow'><a class='purchaseid'>" . $row["id"]. "</a><br><a class='purchasedate'> " . $row["date"]. "</a><br><a class='purchasereward'>" . $row["reward"]. "</a><br><a class='purchaserewardtier'>" . $row["rewardtier"]. "</a><br><a class='purchaseprice'>" . $row["price"]. "</a><br><a class='purchaseredeemed'>" . $row["redeemed"]. "</a><br><a class='purchaseaccount'>" . $row["account"]. "</a><br><a class='purchasetransaction'>" . $row["transaction"]. "</a><br></div>";
+  }
+  echo "</div>"
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>

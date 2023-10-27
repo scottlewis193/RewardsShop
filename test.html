@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+body {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+   box-sizing: border-box;
+}
+.col {
+   color: white;
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+.colContainer:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+@media screen and (max-width: 900px) {
+   .col {
+      width: 50%;
+   }
+}
+@media screen and (max-width: 600px) {
+   .col {
+      width: 100%;
+   }
+}
+</style>
+</head>
+<body>
+<h1>Changing layout on screen size using CSS</h1>
+<h2>Resize the screen to see the below divs resize themselves</h2>
+<div class="colContainer">
+<div class="col" style="background-color: rgb(153, 29, 224);">
+<h2>First col</h2>
+</div>
+<div class="col" style="background-color: rgb(12, 126, 120);">
+<h2>Second col</h2>
+</div>
+<div class="col" style="background-color: rgb(207, 41, 91);">
+<h2>Third col</h2>
+</div>
+<div class="col" style="background-color: rgb(204, 91, 39);">
+<h2>Fourth col</h2>
+</div>
+</div>
+</body>
+</html>
