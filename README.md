@@ -1,0 +1,1 @@
+Solana blockchain powered reward shop. Think of it as a modern day alternative to a children's reward chart. A child can keep track of the amount of coins they earn and spent them on rewards in the shop
